@@ -1,0 +1,103 @@
+//init
+$radius: 0.4rem;
+:root{
+    --clr-btn: #FE3C30;
+    --clr-main: #EDEDED;
+    --clr-bg: #ffffff;
+    --clr-f1: #333333;
+    --clr-f2: var(--clr-bg);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: $radius;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--clr-bg);
+}
+html{
+    scroll-behavior: smooth;
+}
+/* header */
+header .container{
+    padding: 5px;
+}
+h1{
+    text-align: center;
+    font-size: 24px;
+    color: var(--clr-btn);
+}
+/*
+add task
+*/
+.add{
+    .container{
+        display: flex;
+        justify-content: space-between;
+        & > *{
+            padding: 10px;
+        }
+    }
+    input{
+        background: var(--clr-bg);
+        color: var(--clr-f1);
+        width: 100%;
+    }
+    button{
+        min-width: 90px;
+        margin-left: 15px;
+    }
+}
+/*
+tasks
+*/
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: var(--clr-bg);
+    &:not(:last-child){
+        margin-bottom: 15px;
+    }
+    p{
+        color: var(--clr-f1);
+        font-size: 15px;
+        font-weight: 600;
+    }
+    button{
+        font-weight: bold;
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+/*
+global classes
+*/
+button{
+    background: var(--clr-btn);
+    color: var(--clr-f2);
+    cursor: pointer;
+    &:hover{
+        transform: scale(0.95);
+    }
+    &:active{
+        transform: scale(0.90);
+    }
+}
+input, button{
+    &, &:active{
+        outline: none;
+        border: none;
+    }
+}
+.container{
+    width: 90%;
+    max-width: 1000px;
+    background: var(--clr-main);
+    padding: 20px;
+    margin:  30px auto;
+}
