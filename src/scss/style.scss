@@ -44,6 +44,10 @@ add task
         background: var(--clr-bg);
         color: var(--clr-f1);
         width: 100%;
+        &.alert{
+            font-weight: bold;
+            color: var(--clr-btn);
+        }
     }
     button{
         min-width: 90px;
