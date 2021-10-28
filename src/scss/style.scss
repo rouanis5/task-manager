@@ -4,6 +4,7 @@ $radius: 0.4rem;
     --clr-btn: #FE3C30;
     --clr-main: #EDEDED;
     --clr-bg: #ffffff;
+    --clr-bg-h: hsl(0, 0%, 97%);
     --clr-f1: #333333;
     --clr-f2: var(--clr-bg);
 }
@@ -63,6 +64,18 @@ tasks
     align-items: center;
     padding: 10px;
     background: var(--clr-bg);
+    transition: 0.4s;
+    
+    &.completed{
+        opacity: 0.5;
+        position: relative;
+        p{
+            text-decoration: line-through;
+        }
+    }
+    &:hover{
+        background: var(--clr-bg-h);
+    }
     &:not(:last-child){
         margin-bottom: 15px;
     }
@@ -75,6 +88,14 @@ tasks
         font-weight: bold;
         font-size: 14px;
         padding: 5px;
+        z-index: 5;
+        &.deleteBtn{
+            margin-left: auto;
+            margin-right: 5px;
+            font-weight: lighter;
+            background: none;
+            color: var(--clr-btn);
+        }
     }
 }
 
