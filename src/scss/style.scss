@@ -99,6 +99,21 @@ tasks
     }
 }
 
+footer .container {
+    padding: 7px;
+    a{
+        text-decoration: none;
+        color: var(--clr-f1);
+        margin: 5px 15px;
+        font-size: 14px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 /*
 global classes
 */
